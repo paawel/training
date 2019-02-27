@@ -1,0 +1,25 @@
+@import "../node_modules/reset-css/_reset";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "variables";
+@import "mixin";
+
+//TODO: error log arrow answer
+//@import "../node_modules/reset-css/sass/_reset";
+
+.wrapper-decor {
+  width: $app_width;
+  height: $app_height;
+  font: $app_font_size $app_font_family;
+  color: $app_font_color;
+  background: $wrapper_background;
+}
+
+.wrapper {
+  text-align: center;
+  @extend .wrapper-decor;
+  @include border-radius($wrapper_radius);
+
+  &__label {
+    font-size: $app_font_size + .5;
+  }
+}

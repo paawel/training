@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="wrapper"></div>
+
+<script>
+    if(localStorage.getItem('loggedIn')) {
+        document.getElementById('wrapper').innerText = 'Hi again ' + localStorage.getItem('userName');
+    } else {
+        localStorage.setItem('userName', (function() {
+            localStorage.setItem('loggedIn', true);
+
+            var user = prompt('whats your name?');
+
+            document.getElementById('wrapper').innerText = user;
+            return user;
+        })());
+    }
+</script>
+</body>
+</html>

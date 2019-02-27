@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body onload="AppModule.init()">
+
+    <div class="wrapper">
+
+        <div class="welcome">
+            <h1>Welcome to the JavaScript Test</h1>
+            <p>This test is created to give us an idea of your JavaScript knowledge. You may need to explain and motivate your
+                answers. Good luck!</p>
+            <h2>Instructions</h2>
+            <ul>
+                <li>
+                    <strong>Time:</strong> 15 minutes.</li>
+                <li>All changes must be done in main.js.</li>
+                <li>If you finish the test earlier, you could spend some time giving the application a better style.</li>
+            </ul>
+        </div>
+
+        <div id="test-1" class="test">
+            <div class="test-description">
+                Something is broken with this feature. Drag the logo to the drop area and you'll notice that
+                it doesn't work as expected. Debug and fix this problem.
+            </div>
+            <div class="test-block">
+                <div
+                    id="drop-area"
+                    ondrop="AppModule.dragAPI.drop(event)"
+                    ondragover="event.preventDefault()">
+                    Drag logo here
+                </div>
+                <img
+                    id="drag-item"
+                    draggable="true"
+                    src="./assets/logo.png"
+                    alt="Logo">
+            </div>
+        </div>
+
+        <div id="test-2" class="test">
+            <div class="test-description">
+                <strong>This feature is almost done and we think that you're the right person to complete it.
+                The things you need to do are:</strong>
+                <ol>
+                    <li>Increase "0" to "100" when clicking on "Start counting"-button.</li>
+                    <li>Disable the button after a user has interacted with it.</li>
+                </ol>
+            </div>
+            <div class="test-block">
+                <div id="counter">
+                    0
+                </div>
+                <button
+                    onclick="AppModule.startCounting()"
+                    id="start-counting-button">
+                    Start counting
+                </button>
+            </div>
+        </div>
+
+        <div id="test-3" class="test">
+            <div class="test-description">
+                <strong>We need to add some logic to this movement tracking component.
+                Follow these instructions to complete the task:</strong>
+                <ol>
+                    <li>When the user clicks on the "Start tracking"-button start tracking mouse movements inside of the circle.</li>
+                    <li>Disable the button after a user has interacted with it.</li>
+                    <li>Output the "0x0" value with the mouse x and y axsis.</li>
+                    <li>When the user moves away from the circle stop tracking mouse movements inside of the circle and re-enable the button.</li>
+                </ol>
+            </div>
+            <div class="test-block">
+                <div id="circle">
+                    0x0
+                </div>
+                <button
+                    id="start-tracking-button"
+                    onclick="AppModule.startTracking()">
+                    Start tracking
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

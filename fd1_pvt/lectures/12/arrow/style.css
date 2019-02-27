@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.welcome {
+    background-color: #ffffff;
+    border: 1px solid #b249f4;
+    border-bottom-width: 5px;
+    padding: 20px;
+}
+
+.test {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px dashed #d087fb;
+}
+
+.test:nth-child(odd) {
+    background: #ffffff;
+}
+
+.test > * {
+    padding: 10px;
+}
+
+.test .test-description {
+    flex: 1;
+}
+
+* > button {
+    margin-top: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    background: white;
+    outline: 0;
+    font-weight: bold;
+}
+
+#drop-area {
+    height: 60px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#drag-item {
+    max-width: 200px;
+}
+
+#circle {
+    background: black;
+    color: white;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#counter {
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+}

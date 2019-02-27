@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<style>
+		.container {
+			font-size: 2em;
+			width: 300px;
+		}
+
+		.response {
+			width: 300px;
+			height: 100px;
+			background: burlywood;
+			color: white;
+			text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+			margin-top: 25px;
+			font-size: .7em;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+
+	<!--1-->
+		<form action="#" method="get" class="form-group">
+			<label for="name">Name</label>
+			<input class="form-control" type="text" placeholder="name" id="name" name="name" />
+			<label for="age">Age</label>
+			<input class="form-control" type="number" placeholder="18" id="age" name="age" />
+			<label for="pass">Pass</label>
+			<input class="form-control" type="password" id="pass" name="pass" />
+			<input class="form-control" type="submit" value="send" />
+		</form>
+
+	<!--2-->
+		<!--<form action="#" method="post" class="form-group">-->
+			<!--<label for="name">Name</label>-->
+			<!--<input class="form-control" type="text" placeholder="name" id="name" name="name" />-->
+			<!--<label for="age">Age</label>-->
+			<!--<input class="form-control" type="number" placeholder="18" id="age" name="age" />-->
+			<!--<label for="pass">Pass</label>-->
+			<!--<input class="form-control" type="password" id="pass" name="pass" />-->
+			<!--<input class="form-control" type="submit" value="send" />-->
+		<!--</form>-->
+
+	<!--3-->
+		<!--<div>-->
+			<!--<a href="https://jsonplaceholder.typicode.com/users">Сторонний API</a>-->
+
+			<!--<div id="response1" class="response">-->
+				<!--<button id="sendFirst" class="btn btn-primary">First user from response</button>-->
+			<!--</div>-->
+
+			<!--<div id="response2" class="response">-->
+				<!--<button id="sendSecond" class="btn btn-primary">Second user from response</button>-->
+			<!--</div>-->
+		<!--</div>-->
+
+	</div>
+
+	<!--<script>-->
+		<!--//TODO: Anti-pattern code below, just for 'response from server' arrow-->
+
+		<!--let request = v => {-->
+			<!--let request = new XMLHttpRequest();-->
+
+			<!--request.open('GET', 'https://jsonplaceholder.typicode.com/users', false);-->
+			<!--request.send();-->
+
+			<!--if (request.status === 200) {-->
+				<!--let _result = JSON.parse(request.response);-->
+				<!--document.getElementById('response'+ (v + 1)).innerHTML = `User is <strong>${_result[v].name}</strong> from <strong>${_result[v].address.city}</strong>`;-->
+			<!--}-->
+		<!--};-->
+
+		<!--document.getElementById('sendFirst').addEventListener('click', function () {-->
+			<!--request(0);-->
+		<!--});-->
+
+		<!--document.getElementById('sendSecond').addEventListener('click', function () {-->
+			<!--request(1);-->
+		<!--});-->
+	<!--</script>-->
+</body>
+</html>
