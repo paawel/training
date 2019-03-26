@@ -1,23 +1,24 @@
 (function(){
+	let wrapper = document.getElementById('wrapper');
+	let wrapper1 = document.getElementById('wrapper1');
 
-    var returnObjectFromJSONRequest = function(url) {
-        var request = new XMLHttpRequest();
-        var output = {};
+	let returnObjectFromJSONRequest = url => {
+		let request = new XMLHttpRequest();
+		let output = {};
+		request.open('GET', url, false);
+	debugger;
+		request.send();
+	debugger;
+		if (request.status === 200) {
+			return output = JSON.parse(request.response);
+		}
+		return output;
+	};
 
-        request.open('GET', url, false);
-        request.send();
-
-        if (request.status === 200) {
-            return output = JSON.parse(request.response);
-        }
-
-        return output;
-    };
-
-
-    var fromInternet = returnObjectFromJSONRequest('https://jsonplaceholder.typicode.com/posts');
-    var fromLocalDir = returnObjectFromJSONRequest('./node_modules/colors.json/colors.json');
-
-    document.getElementById('wrapper').innerHTML = '<div> Text from data is: ' + fromInternet[0].body + '</div>';
-    document.getElementById('wrapper1').innerHTML = '<div> First color from data is: ' + Object.keys(fromLocalDir)[0] + '</div>';
+	btn.onclick = () => {
+		let fromInternet = returnObjectFromJSONRequest('https://jsonplaceholder.typicode.com/posts');
+		let fromLocalDir = returnObjectFromJSONRequest('./colors.json');
+		wrapper.innerHTML = '<div> Text from data is: ' + fromInternet[0].body + '</div>';
+		wrapper1.innerHTML = '<div> First color from data is: ' + Object.keys(fromLocalDir)[0] + '</div>';
+	};
 })();
