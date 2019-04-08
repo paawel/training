@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="./build/result.min.css">
+	<script src="script/main.js" defer></script>
+</head>
+<body>
+
+<div class="wrapper container">
+	Hello, world!
+	<span class="wrapper__label">
+            Boo!
+	</span>
+</div>
+
+<form action=""
+      class="form"
+      data-cy="loginForm">
+	<div class="form-item">
+		<input type="text"
+		       id="form__name"
+		       class="form__name form-item__input">
+		<div class="form-error form__error-name">
+			Name needed
+		</div>
+	</div>
+	<div class="form-item">
+		<input type="text"
+		       id="form__email"
+		       class="form__email form-item__input">
+		<div class="form-error form__error-email">
+			Email needed
+		</div>
+	</div>
+	<div class="form-item">
+		<input type="password"
+		       id="form__pass"
+		       class="form__password form-item__input">
+		<div class="form-error form__error-password">
+			Password needed
+		</div>
+	</div>
+
+	<input type="submit" value="send" id="form__submit">
+</form>
+
+<div class="form-remover-container">
+	<button id="formRemover">
+		Hide form
+	</button>
+</div>
+
+</body>
+</html>

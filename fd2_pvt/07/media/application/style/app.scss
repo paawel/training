@@ -1,0 +1,36 @@
+@import "variables";
+@import "mixin";
+
+.wrapper-decor {
+  width: $app_width;
+  height: $app_height;
+  font: $app_font_size $app_font_family;
+  color: $app_font_color;
+  background: $wrapper_background;
+}
+
+.wrapper {
+  text-align: center;
+  @extend .wrapper-decor;
+  @include border-radius($wrapper_radius);
+
+  &__label {
+    font-size: $app_font_size + .5;
+  }
+}
+
+.form {
+  margin-top: 50px;
+
+  &-item {
+    margin-bottom: 20px;
+  }
+  &-error {
+    margin: 5px 0;
+    color: red;
+    font-size: 0.8em;
+  }
+  &-remover-container {
+    margin-top: 100px;
+  }
+}
