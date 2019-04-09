@@ -15,3 +15,7 @@ Object.keys(inputs).forEach(i => {
 formRemover.addEventListener('click', () => {
 	form.style.display = 'none';
 });
+
+formShow.addEventListener('click', () => {
+	form.style.display = 'block';
+});

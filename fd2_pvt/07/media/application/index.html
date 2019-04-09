@@ -21,8 +21,10 @@
 	<div class="form-item">
 		<input type="text"
 		       id="form__name"
+		       data-cy="loginForm__username"
 		       class="form__name form-item__input">
-		<div class="form-error form__error-name">
+		<div class="form-error form__error-name"
+		     data-cy="loginForm__username-error">
 			Name needed
 		</div>
 	</div>
@@ -47,10 +49,21 @@
 </form>
 
 <div class="form-remover-container">
-	<button id="formRemover">
+	<button id="formRemover"
+	        data-cy="loginForm__hideFormBTN">
 		Hide form
 	</button>
+	<button id="formShow"
+	        data-cy="loginForm__showFormBTN">
+		Show form
+	</button>
 </div>
+
+<!--TODO: remove comments to break the test -->
+
+<!--<div class="error-div">-->
+<!--Error div-->
+<!--</div>-->
 
 </body>
 </html>

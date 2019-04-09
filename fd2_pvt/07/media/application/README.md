@@ -31,3 +31,4 @@ describe('My First Test', function() {
     "min": "minify -o ./public/build/result.min.css ./public/build/styles/app.css"
 13. npm run sass, npm run min
 14. Add .gitignore with node_modules
+15. Remove comments from index.html
