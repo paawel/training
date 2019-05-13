@@ -42,4 +42,7 @@
     <li>
         <a href="./13/00.md">Lecture 13</a>
     </li>
+    <li>
+        <a href="./14/00.md">Lecture 14</a>
+    </li>
 </ol>
