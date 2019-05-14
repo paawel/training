@@ -5,9 +5,6 @@
 5. npm i babel-cli -g
 6. npm i babel-preset-env --save-dev
 7. npm install -g browserify
-8. npm install uniq --save-dev
-
-
 
   "scripts": {
     "ts": "tsc",
