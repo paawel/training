@@ -1,10 +1,10 @@
 1. npm init
 2. npm i typescript (-g)
 3. look in tsconfig.json
-4. npm run build
-5. npm i babel-cli -g
+4. npm install -g browserify
+5. npm i babel-cli --save-dev
 6. npm i babel-preset-env --save-dev
-7. npm install -g browserify
+
 
   "scripts": {
     "ts": "tsc",
