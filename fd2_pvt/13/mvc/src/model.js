@@ -12,6 +12,7 @@ class Model extends EventEmitter {
     }
 
     addItem(item) {
+        debugger;
         this.items.push(item);
         this.emit('change', this.items);
         return item;

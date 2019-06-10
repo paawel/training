@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <button class="btn btn-primary"
+              (click)='updateData()'
+              [disabled]="!showBtn">
+        Click me
+      </button>
+    </div>
+    <div class="col-sm-12">
+      <div>
+        {{data}}
+      </div>
+    </div>
+  </div>
+</div>

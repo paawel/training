@@ -12,6 +12,7 @@ class Controller {
     }
 
     addTodo(title) {
+        debugger;
         const item = this.model.addItem({
             id: Date.now(),
             title,

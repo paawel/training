@@ -39,6 +39,7 @@ class View extends EventEmitter {
     }
 
     handleAdd(event) {
+        debugger;
         event.preventDefault();
 
         if (!this.input.value) return alert('Необходимо ввести название задачи.');
@@ -89,6 +90,7 @@ class View extends EventEmitter {
     }
 
     addItem(todo) {
+        debugger;
         const listItem = this.createListItem(todo);
 
         this.input.value = '';

@@ -71,318 +71,35 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return createElement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return EventEmitter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return save; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return load; });
-function createElement(tag, props, ...children) {
-    const element = document.createElement(tag);
-
-    Object.keys(props).forEach(key => {
-        if (key.startsWith('data-')) {
-            element.setAttribute(key, props[key]);
-        } else {
-            element[key] = props[key];
-        }
-    });
-
-    children.forEach(child => {
-        if (typeof child === 'string') {
-            child = document.createTextNode(child);
-        }
-
-        element.appendChild(child);
-    });
-
-    return element;
-}
-
-class EventEmitter {
-    constructor() {
-        this.events = {};
-    }
-
-    on(type, listener) {
-        this.events[type] = this.events[type] || [];
-        this.events[type].push(listener);
-    }
-
-    emit(type, arg) {
-        if (this.events[type]) {
-            this.events[type].forEach(listener => listener(arg));
-        }
-    }
-}
-
-function save(data) {
-    const string = JSON.stringify(data);
-
-    localStorage.setItem('todos', string);
-}
-
-function load() {
-    const string = localStorage.getItem('todos');
-    const data = JSON.parse(string);
-
-    return data;
-}
-
-
+eval("/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"d\", function() { return createElement; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"c\", function() { return EventEmitter; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"b\", function() { return save; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"a\", function() { return load; });\nfunction createElement(tag, props, ...children) {\n    const element = document.createElement(tag);\n\n    Object.keys(props).forEach(key => {\n        if (key.startsWith('data-')) {\n            element.setAttribute(key, props[key]);\n        } else {\n            element[key] = props[key];\n        }\n    });\n\n    children.forEach(child => {\n        if (typeof child === 'string') {\n            child = document.createTextNode(child);\n        }\n\n        element.appendChild(child);\n    });\n\n    return element;\n}\n\nclass EventEmitter {\n    constructor() {\n        this.events = {};\n    }\n\n    on(type, listener) {\n        this.events[type] = this.events[type] || [];\n        this.events[type].push(listener);\n    }\n\n    emit(type, arg) {\n        if (this.events[type]) {\n            this.events[type].forEach(listener => listener(arg));\n        }\n    }\n}\n\nfunction save(data) {\n    const string = JSON.stringify(data);\n\n    localStorage.setItem('todos', string);\n}\n\nfunction load() {\n    const string = localStorage.getItem('todos');\n    const data = JSON.parse(string);\n\n    return data;\n}\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9oZWxwZXJzLmpzPzcxN2QiXSwic291cmNlc0NvbnRlbnQiOlsiZnVuY3Rpb24gY3JlYXRlRWxlbWVudCh0YWcsIHByb3BzLCAuLi5jaGlsZHJlbikge1xuICAgIGNvbnN0IGVsZW1lbnQgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KHRhZyk7XG5cbiAgICBPYmplY3Qua2V5cyhwcm9wcykuZm9yRWFjaChrZXkgPT4ge1xuICAgICAgICBpZiAoa2V5LnN0YXJ0c1dpdGgoJ2RhdGEtJykpIHtcbiAgICAgICAgICAgIGVsZW1lbnQuc2V0QXR0cmlidXRlKGtleSwgcHJvcHNba2V5XSk7XG4gICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICBlbGVtZW50W2tleV0gPSBwcm9wc1trZXldO1xuICAgICAgICB9XG4gICAgfSk7XG5cbiAgICBjaGlsZHJlbi5mb3JFYWNoKGNoaWxkID0+IHtcbiAgICAgICAgaWYgKHR5cGVvZiBjaGlsZCA9PT0gJ3N0cmluZycpIHtcbiAgICAgICAgICAgIGNoaWxkID0gZG9jdW1lbnQuY3JlYXRlVGV4dE5vZGUoY2hpbGQpO1xuICAgICAgICB9XG5cbiAgICAgICAgZWxlbWVudC5hcHBlbmRDaGlsZChjaGlsZCk7XG4gICAgfSk7XG5cbiAgICByZXR1cm4gZWxlbWVudDtcbn1cblxuY2xhc3MgRXZlbnRFbWl0dGVyIHtcbiAgICBjb25zdHJ1Y3RvcigpIHtcbiAgICAgICAgdGhpcy5ldmVudHMgPSB7fTtcbiAgICB9XG5cbiAgICBvbih0eXBlLCBsaXN0ZW5lcikge1xuICAgICAgICB0aGlzLmV2ZW50c1t0eXBlXSA9IHRoaXMuZXZlbnRzW3R5cGVdIHx8IFtdO1xuICAgICAgICB0aGlzLmV2ZW50c1t0eXBlXS5wdXNoKGxpc3RlbmVyKTtcbiAgICB9XG5cbiAgICBlbWl0KHR5cGUsIGFyZykge1xuICAgICAgICBpZiAodGhpcy5ldmVudHNbdHlwZV0pIHtcbiAgICAgICAgICAgIHRoaXMuZXZlbnRzW3R5cGVdLmZvckVhY2gobGlzdGVuZXIgPT4gbGlzdGVuZXIoYXJnKSk7XG4gICAgICAgIH1cbiAgICB9XG59XG5cbmZ1bmN0aW9uIHNhdmUoZGF0YSkge1xuICAgIGNvbnN0IHN0cmluZyA9IEpTT04uc3RyaW5naWZ5KGRhdGEpO1xuXG4gICAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oJ3RvZG9zJywgc3RyaW5nKTtcbn1cblxuZnVuY3Rpb24gbG9hZCgpIHtcbiAgICBjb25zdCBzdHJpbmcgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgndG9kb3MnKTtcbiAgICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShzdHJpbmcpO1xuXG4gICAgcmV0dXJuIGRhdGE7XG59XG5cbmV4cG9ydCB7IGNyZWF0ZUVsZW1lbnQsIEV2ZW50RW1pdHRlciwgc2F2ZSwgbG9hZCB9O1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vc3JjL2hlbHBlcnMuanNcbi8vIG1vZHVsZSBpZCA9IDBcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///0\n");
 
 /***/ }),
 /* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-class Controller {
-    constructor(model, view) {
-        this.model = model;
-        this.view = view;
-        
-        view.on('add', this.addTodo.bind(this));
-        view.on('toggle', this.toggleTodo.bind(this));
-        view.on('edit', this.editTodo.bind(this));
-        view.on('remove', this.removeTodo.bind(this));
-
-        view.show(model.items);
-    }
-
-    addTodo(title) {
-        const item = this.model.addItem({
-            id: Date.now(),
-            title,
-            completed: false
-        });
-
-        this.view.addItem(item);
-    }
-
-    toggleTodo({ id, completed }) {
-        const item = this.model.updateItem(id, { completed });
-
-        this.view.toggleItem(item);
-    }
-
-    editTodo({ id, title }) {
-        const item = this.model.updateItem(id, { title });
-        
-        this.view.editItem(item);
-    }
-
-    removeTodo(id) {
-        this.model.removeItem(id);
-        this.view.removeItem(id);
-    }
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (Controller);
+eval("class Controller {\n    constructor(model, view) {\n        this.model = model;\n        this.view = view;\n        \n        view.on('add', this.addTodo.bind(this));\n        view.on('toggle', this.toggleTodo.bind(this));\n        view.on('edit', this.editTodo.bind(this));\n        view.on('remove', this.removeTodo.bind(this));\n\n        view.show(model.items);\n    }\n\n    addTodo(title) {\n        debugger;\n        const item = this.model.addItem({\n            id: Date.now(),\n            title,\n            completed: false\n        });\n\n        this.view.addItem(item);\n    }\n\n    toggleTodo({ id, completed }) {\n        const item = this.model.updateItem(id, { completed });\n\n        this.view.toggleItem(item);\n    }\n\n    editTodo({ id, title }) {\n        const item = this.model.updateItem(id, { title });\n        \n        this.view.editItem(item);\n    }\n\n    removeTodo(id) {\n        this.model.removeItem(id);\n        this.view.removeItem(id);\n    }\n}\n\n/* harmony default export */ __webpack_exports__[\"a\"] = (Controller);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMS5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9jb250cm9sbGVyLmpzPzQ3NjYiXSwic291cmNlc0NvbnRlbnQiOlsiY2xhc3MgQ29udHJvbGxlciB7XG4gICAgY29uc3RydWN0b3IobW9kZWwsIHZpZXcpIHtcbiAgICAgICAgdGhpcy5tb2RlbCA9IG1vZGVsO1xuICAgICAgICB0aGlzLnZpZXcgPSB2aWV3O1xuICAgICAgICBcbiAgICAgICAgdmlldy5vbignYWRkJywgdGhpcy5hZGRUb2RvLmJpbmQodGhpcykpO1xuICAgICAgICB2aWV3Lm9uKCd0b2dnbGUnLCB0aGlzLnRvZ2dsZVRvZG8uYmluZCh0aGlzKSk7XG4gICAgICAgIHZpZXcub24oJ2VkaXQnLCB0aGlzLmVkaXRUb2RvLmJpbmQodGhpcykpO1xuICAgICAgICB2aWV3Lm9uKCdyZW1vdmUnLCB0aGlzLnJlbW92ZVRvZG8uYmluZCh0aGlzKSk7XG5cbiAgICAgICAgdmlldy5zaG93KG1vZGVsLml0ZW1zKTtcbiAgICB9XG5cbiAgICBhZGRUb2RvKHRpdGxlKSB7XG4gICAgICAgIGRlYnVnZ2VyO1xuICAgICAgICBjb25zdCBpdGVtID0gdGhpcy5tb2RlbC5hZGRJdGVtKHtcbiAgICAgICAgICAgIGlkOiBEYXRlLm5vdygpLFxuICAgICAgICAgICAgdGl0bGUsXG4gICAgICAgICAgICBjb21wbGV0ZWQ6IGZhbHNlXG4gICAgICAgIH0pO1xuXG4gICAgICAgIHRoaXMudmlldy5hZGRJdGVtKGl0ZW0pO1xuICAgIH1cblxuICAgIHRvZ2dsZVRvZG8oeyBpZCwgY29tcGxldGVkIH0pIHtcbiAgICAgICAgY29uc3QgaXRlbSA9IHRoaXMubW9kZWwudXBkYXRlSXRlbShpZCwgeyBjb21wbGV0ZWQgfSk7XG5cbiAgICAgICAgdGhpcy52aWV3LnRvZ2dsZUl0ZW0oaXRlbSk7XG4gICAgfVxuXG4gICAgZWRpdFRvZG8oeyBpZCwgdGl0bGUgfSkge1xuICAgICAgICBjb25zdCBpdGVtID0gdGhpcy5tb2RlbC51cGRhdGVJdGVtKGlkLCB7IHRpdGxlIH0pO1xuICAgICAgICBcbiAgICAgICAgdGhpcy52aWV3LmVkaXRJdGVtKGl0ZW0pO1xuICAgIH1cblxuICAgIHJlbW92ZVRvZG8oaWQpIHtcbiAgICAgICAgdGhpcy5tb2RlbC5yZW1vdmVJdGVtKGlkKTtcbiAgICAgICAgdGhpcy52aWV3LnJlbW92ZUl0ZW0oaWQpO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgQ29udHJvbGxlcjtcblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL3NyYy9jb250cm9sbGVyLmpzXG4vLyBtb2R1bGUgaWQgPSAxXG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///1\n");
 
 /***/ }),
 /* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__helpers__ = __webpack_require__(0);
-
-
-class Model extends __WEBPACK_IMPORTED_MODULE_0__helpers__["c" /* EventEmitter */] {
-    constructor(items = []) {
-        super();
-        
-        this.items = items;
-    }
-
-    getItem(id) {
-        return this.items.find(item => item.id == id);
-    }
-
-    addItem(item) {
-        this.items.push(item);
-        this.emit('change', this.items);
-        return item;
-    }
-
-    updateItem(id, data) {
-        const item = this.getItem(id);
-
-        Object.keys(data).forEach(prop => item[prop] = data[prop]);
-
-        this.emit('change', this.items);
-        
-        return item;
-    }
-
-    removeItem(id) {
-        const index = this.items.findIndex(item => item.id == id);
-        
-        if (index > -1) {
-            this.items.splice(index, 1);
-            this.emit('change', this.items);
-        }
-    }
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (Model);
+eval("/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__helpers__ = __webpack_require__(0);\n\n\nclass Model extends __WEBPACK_IMPORTED_MODULE_0__helpers__[\"c\" /* EventEmitter */] {\n    constructor(items = []) {\n        super();\n        \n        this.items = items;\n    }\n\n    getItem(id) {\n        return this.items.find(item => item.id == id);\n    }\n\n    addItem(item) {\n        debugger;\n        this.items.push(item);\n        this.emit('change', this.items);\n        return item;\n    }\n\n    updateItem(id, data) {\n        const item = this.getItem(id);\n\n        Object.keys(data).forEach(prop => item[prop] = data[prop]);\n\n        this.emit('change', this.items);\n        \n        return item;\n    }\n\n    removeItem(id) {\n        const index = this.items.findIndex(item => item.id == id);\n        \n        if (index > -1) {\n            this.items.splice(index, 1);\n            this.emit('change', this.items);\n        }\n    }\n}\n\n/* harmony default export */ __webpack_exports__[\"a\"] = (Model);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMi5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9tb2RlbC5qcz85NGVjIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEV2ZW50RW1pdHRlciB9IGZyb20gJy4vaGVscGVycyc7XG5cbmNsYXNzIE1vZGVsIGV4dGVuZHMgRXZlbnRFbWl0dGVyIHtcbiAgICBjb25zdHJ1Y3RvcihpdGVtcyA9IFtdKSB7XG4gICAgICAgIHN1cGVyKCk7XG4gICAgICAgIFxuICAgICAgICB0aGlzLml0ZW1zID0gaXRlbXM7XG4gICAgfVxuXG4gICAgZ2V0SXRlbShpZCkge1xuICAgICAgICByZXR1cm4gdGhpcy5pdGVtcy5maW5kKGl0ZW0gPT4gaXRlbS5pZCA9PSBpZCk7XG4gICAgfVxuXG4gICAgYWRkSXRlbShpdGVtKSB7XG4gICAgICAgIGRlYnVnZ2VyO1xuICAgICAgICB0aGlzLml0ZW1zLnB1c2goaXRlbSk7XG4gICAgICAgIHRoaXMuZW1pdCgnY2hhbmdlJywgdGhpcy5pdGVtcyk7XG4gICAgICAgIHJldHVybiBpdGVtO1xuICAgIH1cblxuICAgIHVwZGF0ZUl0ZW0oaWQsIGRhdGEpIHtcbiAgICAgICAgY29uc3QgaXRlbSA9IHRoaXMuZ2V0SXRlbShpZCk7XG5cbiAgICAgICAgT2JqZWN0LmtleXMoZGF0YSkuZm9yRWFjaChwcm9wID0+IGl0ZW1bcHJvcF0gPSBkYXRhW3Byb3BdKTtcblxuICAgICAgICB0aGlzLmVtaXQoJ2NoYW5nZScsIHRoaXMuaXRlbXMpO1xuICAgICAgICBcbiAgICAgICAgcmV0dXJuIGl0ZW07XG4gICAgfVxuXG4gICAgcmVtb3ZlSXRlbShpZCkge1xuICAgICAgICBjb25zdCBpbmRleCA9IHRoaXMuaXRlbXMuZmluZEluZGV4KGl0ZW0gPT4gaXRlbS5pZCA9PSBpZCk7XG4gICAgICAgIFxuICAgICAgICBpZiAoaW5kZXggPiAtMSkge1xuICAgICAgICAgICAgdGhpcy5pdGVtcy5zcGxpY2UoaW5kZXgsIDEpO1xuICAgICAgICAgICAgdGhpcy5lbWl0KCdjaGFuZ2UnLCB0aGlzLml0ZW1zKTtcbiAgICAgICAgfVxuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgTW9kZWw7XG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9zcmMvbW9kZWwuanNcbi8vIG1vZHVsZSBpZCA9IDJcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///2\n");
 
 /***/ }),
 /* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__helpers__ = __webpack_require__(0);
-
-
-class View extends __WEBPACK_IMPORTED_MODULE_0__helpers__["c" /* EventEmitter */] {
-    constructor() {
-        super();
-
-        this.form = document.getElementById('todo-form');
-        this.input = document.getElementById('add-input');
-        this.list = document.getElementById('todo-list');
-
-        this.form.addEventListener('submit', this.handleAdd.bind(this));
-    }
-
-    createListItem(todo) {
-        const checkbox = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__helpers__["d" /* createElement */])('input', { type: 'checkbox', className: 'checkbox', checked: todo.completed ? 'checked' : '' });
-        const label = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__helpers__["d" /* createElement */])('label', { className: 'title' }, todo.title);
-        const editInput = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__helpers__["d" /* createElement */])('input', { type: 'text', className: 'textfield' });
-        const editButton = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__helpers__["d" /* createElement */])('button', { className: 'edit' }, 'Изменить');
-        const deleteButton = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__helpers__["d" /* createElement */])('button', { className: 'remove' }, 'Удалить');
-        const item = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__helpers__["d" /* createElement */])('li', { className: `todo-item${todo.completed ? ' completed': ''}`, 'data-id': todo.id }, checkbox, label, editInput, editButton, deleteButton);
-
-        return this.addEventListeners(item);
-    }
-
-    addEventListeners(item) {
-        const checkbox = item.querySelector('.checkbox');
-        const editButton = item.querySelector('button.edit');
-        const removeButton = item.querySelector('button.remove');
-
-        checkbox.addEventListener('change', this.handleToggle.bind(this));
-        editButton.addEventListener('click', this.handleEdit.bind(this));
-        removeButton.addEventListener('click', this.handleRemove.bind(this));
-
-        return item;
-    }
-
-    findListItem(id) {
-        return this.list.querySelector(`[data-id="${id}"]`);
-    }
-
-    handleAdd(event) {
-        event.preventDefault();
-
-        if (!this.input.value) return alert('Необходимо ввести название задачи.');
-
-        const value = this.input.value;
-
-        this.emit('add', value);
-    }
-
-    handleToggle({ target }) {
-        const listItem = target.parentNode;
-        const id = listItem.getAttribute('data-id');
-        const completed = target.checked;
-
-        this.emit('toggle', { id, completed });
-    }
-
-    handleEdit({ target }) {
-        const listItem = target.parentNode;
-        const id = listItem.getAttribute('data-id');
-        const label = listItem.querySelector('.title');
-        const input = listItem.querySelector('.textfield');
-        const editButton = listItem.querySelector('button.edit');
-        const title = input.value;
-        const isEditing = listItem.classList.contains('editing');
-
-        if (isEditing) {
-            this.emit('edit', { id, title });
-        } else {
-            input.value = label.textContent;
-            editButton.textContent = 'Сохранить';
-            listItem.classList.add('editing');
-        }
-    }
-
-    handleRemove({ target }) {
-        const listItem = target.parentNode;
-
-        this.emit('remove', listItem.getAttribute('data-id'));
-    }
-
-    show(todos) {
-        todos.forEach(todo => {
-            const listItem = this.createListItem(todo);
-
-            this.list.appendChild(listItem);
-        });
-    }
-
-    addItem(todo) {
-        debugger;
-        const listItem = this.createListItem(todo);
-
-        this.input.value = '';
-        this.list.appendChild(listItem);
-    }
-
-    toggleItem(todo) {
-        const listItem = this.findListItem(todo.id);
-        const checkbox = listItem.querySelector('.checkbox');
-
-        checkbox.checked = todo.completed;
-
-        if (todo.completed) {
-            listItem.classList.add('completed');
-        } else {
-            listItem.classList.remove('completed');
-        }
-    }
-
-    editItem(todo) {
-        const listItem = this.findListItem(todo.id);
-        const label = listItem.querySelector('.title');
-        const input = listItem.querySelector('.textfield');
-        const editButton = listItem.querySelector('button.edit');
-
-        label.textContent = todo.title;
-        editButton.textContent = 'Изменить';
-        listItem.classList.remove('editing');
-    }
-
-    removeItem(id) {
-        const listItem = this.findListItem(id);
-
-        this.list.removeChild(listItem);
-    }
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (View);
+eval("/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__helpers__ = __webpack_require__(0);\n\n\nclass View extends __WEBPACK_IMPORTED_MODULE_0__helpers__[\"c\" /* EventEmitter */] {\n    constructor() {\n        super();\n\n        this.form = document.getElementById('todo-form');\n        this.input = document.getElementById('add-input');\n        this.list = document.getElementById('todo-list');\n\n        this.form.addEventListener('submit', this.handleAdd.bind(this));\n    }\n\n    createListItem(todo) {\n        const checkbox = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__helpers__[\"d\" /* createElement */])('input', { type: 'checkbox', className: 'checkbox', checked: todo.completed ? 'checked' : '' });\n        const label = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__helpers__[\"d\" /* createElement */])('label', { className: 'title' }, todo.title);\n        const editInput = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__helpers__[\"d\" /* createElement */])('input', { type: 'text', className: 'textfield' });\n        const editButton = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__helpers__[\"d\" /* createElement */])('button', { className: 'edit' }, 'Изменить');\n        const deleteButton = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__helpers__[\"d\" /* createElement */])('button', { className: 'remove' }, 'Удалить');\n        const item = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__helpers__[\"d\" /* createElement */])('li', { className: `todo-item${todo.completed ? ' completed': ''}`, 'data-id': todo.id }, checkbox, label, editInput, editButton, deleteButton);\n\n        return this.addEventListeners(item);\n    }\n\n    addEventListeners(item) {\n        const checkbox = item.querySelector('.checkbox');\n        const editButton = item.querySelector('button.edit');\n        const removeButton = item.querySelector('button.remove');\n\n        checkbox.addEventListener('change', this.handleToggle.bind(this));\n        editButton.addEventListener('click', this.handleEdit.bind(this));\n        removeButton.addEventListener('click', this.handleRemove.bind(this));\n\n        return item;\n    }\n\n    findListItem(id) {\n        return this.list.querySelector(`[data-id=\"${id}\"]`);\n    }\n\n    handleAdd(event) {\n        debugger;\n        event.preventDefault();\n\n        if (!this.input.value) return alert('Необходимо ввести название задачи.');\n\n        const value = this.input.value;\n\n        this.emit('add', value);\n    }\n\n    handleToggle({ target }) {\n        const listItem = target.parentNode;\n        const id = listItem.getAttribute('data-id');\n        const completed = target.checked;\n\n        this.emit('toggle', { id, completed });\n    }\n\n    handleEdit({ target }) {\n        const listItem = target.parentNode;\n        const id = listItem.getAttribute('data-id');\n        const label = listItem.querySelector('.title');\n        const input = listItem.querySelector('.textfield');\n        const editButton = listItem.querySelector('button.edit');\n        const title = input.value;\n        const isEditing = listItem.classList.contains('editing');\n\n        if (isEditing) {\n            this.emit('edit', { id, title });\n        } else {\n            input.value = label.textContent;\n            editButton.textContent = 'Сохранить';\n            listItem.classList.add('editing');\n        }\n    }\n\n    handleRemove({ target }) {\n        const listItem = target.parentNode;\n\n        this.emit('remove', listItem.getAttribute('data-id'));\n    }\n\n    show(todos) {\n        todos.forEach(todo => {\n            const listItem = this.createListItem(todo);\n\n            this.list.appendChild(listItem);\n        });\n    }\n\n    addItem(todo) {\n        debugger;\n        const listItem = this.createListItem(todo);\n\n        this.input.value = '';\n        this.list.appendChild(listItem);\n    }\n\n    toggleItem(todo) {\n        const listItem = this.findListItem(todo.id);\n        const checkbox = listItem.querySelector('.checkbox');\n\n        checkbox.checked = todo.completed;\n\n        if (todo.completed) {\n            listItem.classList.add('completed');\n        } else {\n            listItem.classList.remove('completed');\n        }\n    }\n\n    editItem(todo) {\n        const listItem = this.findListItem(todo.id);\n        const label = listItem.querySelector('.title');\n        const input = listItem.querySelector('.textfield');\n        const editButton = listItem.querySelector('button.edit');\n\n        label.textContent = todo.title;\n        editButton.textContent = 'Изменить';\n        listItem.classList.remove('editing');\n    }\n\n    removeItem(id) {\n        const listItem = this.findListItem(id);\n\n        this.list.removeChild(listItem);\n    }\n}\n\n/* harmony default export */ __webpack_exports__[\"a\"] = (View);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy92aWV3LmpzPzMyMGEiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgRXZlbnRFbWl0dGVyLCBjcmVhdGVFbGVtZW50IH0gZnJvbSAnLi9oZWxwZXJzJztcblxuY2xhc3MgVmlldyBleHRlbmRzIEV2ZW50RW1pdHRlciB7XG4gICAgY29uc3RydWN0b3IoKSB7XG4gICAgICAgIHN1cGVyKCk7XG5cbiAgICAgICAgdGhpcy5mb3JtID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3RvZG8tZm9ybScpO1xuICAgICAgICB0aGlzLmlucHV0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2FkZC1pbnB1dCcpO1xuICAgICAgICB0aGlzLmxpc3QgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgndG9kby1saXN0Jyk7XG5cbiAgICAgICAgdGhpcy5mb3JtLmFkZEV2ZW50TGlzdGVuZXIoJ3N1Ym1pdCcsIHRoaXMuaGFuZGxlQWRkLmJpbmQodGhpcykpO1xuICAgIH1cblxuICAgIGNyZWF0ZUxpc3RJdGVtKHRvZG8pIHtcbiAgICAgICAgY29uc3QgY2hlY2tib3ggPSBjcmVhdGVFbGVtZW50KCdpbnB1dCcsIHsgdHlwZTogJ2NoZWNrYm94JywgY2xhc3NOYW1lOiAnY2hlY2tib3gnLCBjaGVja2VkOiB0b2RvLmNvbXBsZXRlZCA/ICdjaGVja2VkJyA6ICcnIH0pO1xuICAgICAgICBjb25zdCBsYWJlbCA9IGNyZWF0ZUVsZW1lbnQoJ2xhYmVsJywgeyBjbGFzc05hbWU6ICd0aXRsZScgfSwgdG9kby50aXRsZSk7XG4gICAgICAgIGNvbnN0IGVkaXRJbnB1dCA9IGNyZWF0ZUVsZW1lbnQoJ2lucHV0JywgeyB0eXBlOiAndGV4dCcsIGNsYXNzTmFtZTogJ3RleHRmaWVsZCcgfSk7XG4gICAgICAgIGNvbnN0IGVkaXRCdXR0b24gPSBjcmVhdGVFbGVtZW50KCdidXR0b24nLCB7IGNsYXNzTmFtZTogJ2VkaXQnIH0sICfQmNC30LzQtdC90LjRgtGMJyk7XG4gICAgICAgIGNvbnN0IGRlbGV0ZUJ1dHRvbiA9IGNyZWF0ZUVsZW1lbnQoJ2J1dHRvbicsIHsgY2xhc3NOYW1lOiAncmVtb3ZlJyB9LCAn0KPQtNCw0LvQuNGC0YwnKTtcbiAgICAgICAgY29uc3QgaXRlbSA9IGNyZWF0ZUVsZW1lbnQoJ2xpJywgeyBjbGFzc05hbWU6IGB0b2RvLWl0ZW0ke3RvZG8uY29tcGxldGVkID8gJyBjb21wbGV0ZWQnOiAnJ31gLCAnZGF0YS1pZCc6IHRvZG8uaWQgfSwgY2hlY2tib3gsIGxhYmVsLCBlZGl0SW5wdXQsIGVkaXRCdXR0b24sIGRlbGV0ZUJ1dHRvbik7XG5cbiAgICAgICAgcmV0dXJuIHRoaXMuYWRkRXZlbnRMaXN0ZW5lcnMoaXRlbSk7XG4gICAgfVxuXG4gICAgYWRkRXZlbnRMaXN0ZW5lcnMoaXRlbSkge1xuICAgICAgICBjb25zdCBjaGVja2JveCA9IGl0ZW0ucXVlcnlTZWxlY3RvcignLmNoZWNrYm94Jyk7XG4gICAgICAgIGNvbnN0IGVkaXRCdXR0b24gPSBpdGVtLnF1ZXJ5U2VsZWN0b3IoJ2J1dHRvbi5lZGl0Jyk7XG4gICAgICAgIGNvbnN0IHJlbW92ZUJ1dHRvbiA9IGl0ZW0ucXVlcnlTZWxlY3RvcignYnV0dG9uLnJlbW92ZScpO1xuXG4gICAgICAgIGNoZWNrYm94LmFkZEV2ZW50TGlzdGVuZXIoJ2NoYW5nZScsIHRoaXMuaGFuZGxlVG9nZ2xlLmJpbmQodGhpcykpO1xuICAgICAgICBlZGl0QnV0dG9uLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgdGhpcy5oYW5kbGVFZGl0LmJpbmQodGhpcykpO1xuICAgICAgICByZW1vdmVCdXR0b24uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCB0aGlzLmhhbmRsZVJlbW92ZS5iaW5kKHRoaXMpKTtcblxuICAgICAgICByZXR1cm4gaXRlbTtcbiAgICB9XG5cbiAgICBmaW5kTGlzdEl0ZW0oaWQpIHtcbiAgICAgICAgcmV0dXJuIHRoaXMubGlzdC5xdWVyeVNlbGVjdG9yKGBbZGF0YS1pZD1cIiR7aWR9XCJdYCk7XG4gICAgfVxuXG4gICAgaGFuZGxlQWRkKGV2ZW50KSB7XG4gICAgICAgIGRlYnVnZ2VyO1xuICAgICAgICBldmVudC5wcmV2ZW50RGVmYXVsdCgpO1xuXG4gICAgICAgIGlmICghdGhpcy5pbnB1dC52YWx1ZSkgcmV0dXJuIGFsZXJ0KCfQndC10L7QsdGF0L7QtNC40LzQviDQstCy0LXRgdGC0Lgg0L3QsNC30LLQsNC90LjQtSDQt9Cw0LTQsNGH0LguJyk7XG5cbiAgICAgICAgY29uc3QgdmFsdWUgPSB0aGlzLmlucHV0LnZhbHVlO1xuXG4gICAgICAgIHRoaXMuZW1pdCgnYWRkJywgdmFsdWUpO1xuICAgIH1cblxuICAgIGhhbmRsZVRvZ2dsZSh7IHRhcmdldCB9KSB7XG4gICAgICAgIGNvbnN0IGxpc3RJdGVtID0gdGFyZ2V0LnBhcmVudE5vZGU7XG4gICAgICAgIGNvbnN0IGlkID0gbGlzdEl0ZW0uZ2V0QXR0cmlidXRlKCdkYXRhLWlkJyk7XG4gICAgICAgIGNvbnN0IGNvbXBsZXRlZCA9IHRhcmdldC5jaGVja2VkO1xuXG4gICAgICAgIHRoaXMuZW1pdCgndG9nZ2xlJywgeyBpZCwgY29tcGxldGVkIH0pO1xuICAgIH1cblxuICAgIGhhbmRsZUVkaXQoeyB0YXJnZXQgfSkge1xuICAgICAgICBjb25zdCBsaXN0SXRlbSA9IHRhcmdldC5wYXJlbnROb2RlO1xuICAgICAgICBjb25zdCBpZCA9IGxpc3RJdGVtLmdldEF0dHJpYnV0ZSgnZGF0YS1pZCcpO1xuICAgICAgICBjb25zdCBsYWJlbCA9IGxpc3RJdGVtLnF1ZXJ5U2VsZWN0b3IoJy50aXRsZScpO1xuICAgICAgICBjb25zdCBpbnB1dCA9IGxpc3RJdGVtLnF1ZXJ5U2VsZWN0b3IoJy50ZXh0ZmllbGQnKTtcbiAgICAgICAgY29uc3QgZWRpdEJ1dHRvbiA9IGxpc3RJdGVtLnF1ZXJ5U2VsZWN0b3IoJ2J1dHRvbi5lZGl0Jyk7XG4gICAgICAgIGNvbnN0IHRpdGxlID0gaW5wdXQudmFsdWU7XG4gICAgICAgIGNvbnN0IGlzRWRpdGluZyA9IGxpc3RJdGVtLmNsYXNzTGlzdC5jb250YWlucygnZWRpdGluZycpO1xuXG4gICAgICAgIGlmIChpc0VkaXRpbmcpIHtcbiAgICAgICAgICAgIHRoaXMuZW1pdCgnZWRpdCcsIHsgaWQsIHRpdGxlIH0pO1xuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgICAgaW5wdXQudmFsdWUgPSBsYWJlbC50ZXh0Q29udGVudDtcbiAgICAgICAgICAgIGVkaXRCdXR0b24udGV4dENvbnRlbnQgPSAn0KHQvtGF0YDQsNC90LjRgtGMJztcbiAgICAgICAgICAgIGxpc3RJdGVtLmNsYXNzTGlzdC5hZGQoJ2VkaXRpbmcnKTtcbiAgICAgICAgfVxuICAgIH1cblxuICAgIGhhbmRsZVJlbW92ZSh7IHRhcmdldCB9KSB7XG4gICAgICAgIGNvbnN0IGxpc3RJdGVtID0gdGFyZ2V0LnBhcmVudE5vZGU7XG5cbiAgICAgICAgdGhpcy5lbWl0KCdyZW1vdmUnLCBsaXN0SXRlbS5nZXRBdHRyaWJ1dGUoJ2RhdGEtaWQnKSk7XG4gICAgfVxuXG4gICAgc2hvdyh0b2Rvcykge1xuICAgICAgICB0b2Rvcy5mb3JFYWNoKHRvZG8gPT4ge1xuICAgICAgICAgICAgY29uc3QgbGlzdEl0ZW0gPSB0aGlzLmNyZWF0ZUxpc3RJdGVtKHRvZG8pO1xuXG4gICAgICAgICAgICB0aGlzLmxpc3QuYXBwZW5kQ2hpbGQobGlzdEl0ZW0pO1xuICAgICAgICB9KTtcbiAgICB9XG5cbiAgICBhZGRJdGVtKHRvZG8pIHtcbiAgICAgICAgZGVidWdnZXI7XG4gICAgICAgIGNvbnN0IGxpc3RJdGVtID0gdGhpcy5jcmVhdGVMaXN0SXRlbSh0b2RvKTtcblxuICAgICAgICB0aGlzLmlucHV0LnZhbHVlID0gJyc7XG4gICAgICAgIHRoaXMubGlzdC5hcHBlbmRDaGlsZChsaXN0SXRlbSk7XG4gICAgfVxuXG4gICAgdG9nZ2xlSXRlbSh0b2RvKSB7XG4gICAgICAgIGNvbnN0IGxpc3RJdGVtID0gdGhpcy5maW5kTGlzdEl0ZW0odG9kby5pZCk7XG4gICAgICAgIGNvbnN0IGNoZWNrYm94ID0gbGlzdEl0ZW0ucXVlcnlTZWxlY3RvcignLmNoZWNrYm94Jyk7XG5cbiAgICAgICAgY2hlY2tib3guY2hlY2tlZCA9IHRvZG8uY29tcGxldGVkO1xuXG4gICAgICAgIGlmICh0b2RvLmNvbXBsZXRlZCkge1xuICAgICAgICAgICAgbGlzdEl0ZW0uY2xhc3NMaXN0LmFkZCgnY29tcGxldGVkJyk7XG4gICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICBsaXN0SXRlbS5jbGFzc0xpc3QucmVtb3ZlKCdjb21wbGV0ZWQnKTtcbiAgICAgICAgfVxuICAgIH1cblxuICAgIGVkaXRJdGVtKHRvZG8pIHtcbiAgICAgICAgY29uc3QgbGlzdEl0ZW0gPSB0aGlzLmZpbmRMaXN0SXRlbSh0b2RvLmlkKTtcbiAgICAgICAgY29uc3QgbGFiZWwgPSBsaXN0SXRlbS5xdWVyeVNlbGVjdG9yKCcudGl0bGUnKTtcbiAgICAgICAgY29uc3QgaW5wdXQgPSBsaXN0SXRlbS5xdWVyeVNlbGVjdG9yKCcudGV4dGZpZWxkJyk7XG4gICAgICAgIGNvbnN0IGVkaXRCdXR0b24gPSBsaXN0SXRlbS5xdWVyeVNlbGVjdG9yKCdidXR0b24uZWRpdCcpO1xuXG4gICAgICAgIGxhYmVsLnRleHRDb250ZW50ID0gdG9kby50aXRsZTtcbiAgICAgICAgZWRpdEJ1dHRvbi50ZXh0Q29udGVudCA9ICfQmNC30LzQtdC90LjRgtGMJztcbiAgICAgICAgbGlzdEl0ZW0uY2xhc3NMaXN0LnJlbW92ZSgnZWRpdGluZycpO1xuICAgIH1cblxuICAgIHJlbW92ZUl0ZW0oaWQpIHtcbiAgICAgICAgY29uc3QgbGlzdEl0ZW0gPSB0aGlzLmZpbmRMaXN0SXRlbShpZCk7XG5cbiAgICAgICAgdGhpcy5saXN0LnJlbW92ZUNoaWxkKGxpc3RJdGVtKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IFZpZXc7XG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9zcmMvdmlldy5qc1xuLy8gbW9kdWxlIGlkID0gM1xuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///3\n");
 
 /***/ }),
 /* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__model__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__view__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__controller__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__helpers__ = __webpack_require__(0);
-
-
-
-
-
-const state = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__helpers__["a" /* load */])();
-
-const model = new __WEBPACK_IMPORTED_MODULE_0__model__["a" /* default */](state || undefined);
-model.on('change', state => __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__helpers__["b" /* save */])(state));
-
-const view = new __WEBPACK_IMPORTED_MODULE_1__view__["a" /* default */]();
-const controller = new __WEBPACK_IMPORTED_MODULE_2__controller__["a" /* default */](model, view);
+eval("Object.defineProperty(__webpack_exports__, \"__esModule\", { value: true });\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__model__ = __webpack_require__(2);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__view__ = __webpack_require__(3);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__controller__ = __webpack_require__(1);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__helpers__ = __webpack_require__(0);\n\n\n\n\n\nconst state = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__helpers__[\"a\" /* load */])();\n\nconst model = new __WEBPACK_IMPORTED_MODULE_0__model__[\"a\" /* default */](state || undefined);\nmodel.on('change', state => __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__helpers__[\"b\" /* save */])(state));\n\nconst view = new __WEBPACK_IMPORTED_MODULE_1__view__[\"a\" /* default */]();\nconst controller = new __WEBPACK_IMPORTED_MODULE_2__controller__[\"a\" /* default */](model, view);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9pbmRleC5qcz85NTUyIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBNb2RlbCBmcm9tICcuL21vZGVsJztcbmltcG9ydCBWaWV3IGZyb20gJy4vdmlldyc7XG5pbXBvcnQgQ29udHJvbGxlciBmcm9tICcuL2NvbnRyb2xsZXInO1xuaW1wb3J0IHsgc2F2ZSwgbG9hZCB9IGZyb20gJy4vaGVscGVycyc7XG5cbmNvbnN0IHN0YXRlID0gbG9hZCgpO1xuXG5jb25zdCBtb2RlbCA9IG5ldyBNb2RlbChzdGF0ZSB8fCB1bmRlZmluZWQpO1xubW9kZWwub24oJ2NoYW5nZScsIHN0YXRlID0+IHNhdmUoc3RhdGUpKTtcblxuY29uc3QgdmlldyA9IG5ldyBWaWV3KCk7XG5jb25zdCBjb250cm9sbGVyID0gbmV3IENvbnRyb2xsZXIobW9kZWwsIHZpZXcpO1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vc3JjL2luZGV4LmpzXG4vLyBtb2R1bGUgaWQgPSA0XG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///4\n");
 
 /***/ })
 /******/ ]);
