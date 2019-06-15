@@ -1,6 +1,6 @@
 1. ng new sample-app
 2. ng serve
-3. app-root tag and component name, main.ts
+3. project overview, lint single quotes, build, run, app-root tag and component name, main.ts
 4. classic example
     a. In module file add FormsModule in imports
     b. <div style="text-align:center" class="container">
