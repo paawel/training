@@ -7,7 +7,7 @@
         <a href="lectures/01/01.md">Introduction</a>
     </li>
     <li>
-        <a href="lectures/02/01.md"></a>
+        <a href="lectures/02/01.md">HTML</a>
     </li>
     <li>
         <a href="lectures/03/01.md"></a>
