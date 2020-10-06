@@ -7,28 +7,28 @@
         <a href="lectures/01/01.md">Introduction</a>
     </li>
     <li>
-        <a href="lectures/02/01.md">HTML</a>
+        <a href="lectures/02/01.md"><b>HTML</b></a>
     </li>
     <li>
-        <a href="lectures/03/01.md"></a>
+        <a href="lectures/03/01.md"><b>CSS</b> (selectors)</a>
     </li>
     <li>
-        <a href="lectures/04/01.md"></a>
+        <a href="lectures/04/01.md"><b>CSS</b> (colors, units, box model, html video/audio)</a>
     </li>
     <li>
-        <a href="lectures/05/01.md"></a>
+        <a href="lectures/05/01.md"><b>CSS</b> (position, float)</a>
     </li>
     <li>
-        <a href="lectures/06/01.md"></a>
+        <a href="lectures/06/01.md"><b>CSS</b> (animation, markup, margin collapsing)</a>
     </li>
     <li>
-        <a href="lectures/07/01.md"></a>
+        <a href="lectures/07/01.md"><b>CSS</b> (flex, media queries)</a>
     </li>
     <li>
-        <a href="lectures/08/01.md"></a>
+        <a href="lectures/08/01.md"><b>CSS</b> (Bootstrap, BEM methodology)</a>
     </li>
     <li>
-        <a href="lectures/09/01.md"></a>
+        <a href="lectures/09/01.md"><b>CSS</b> (Preprocessors)</a>
     </li>
     <li>
         <a href="lectures/10/01.md"></a>

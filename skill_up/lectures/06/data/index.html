@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .wrapper {
+            width: 800px;
+            height: 800px;
+            outline: 1px solid black;
+            margin: 20px 0 0 50px;
+            position: relative;
+        }
+
+        .element {
+            position: absolute;
+        }
+
+        .element-1 {
+            width: 211px;
+            height: 263px;
+            background: url("img1.png");
+        }
+
+        .element-2 {
+            width: 11px;
+            height: 141px;
+            background: url("img2.png");
+        }
+
+        /*#layout {*/
+            /*width: 800px;*/
+            /*height: 800px;*/
+            /*margin-left: 50px;*/
+            /*background: url("подложка_макет.png");*/
+            /*z-index: -1;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="element element-1"></div>
+        <div class="element element-2"></div>
+    </div>
+
+    <div id="layout"></div>
+</body>
+</html>
