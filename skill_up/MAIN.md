@@ -123,16 +123,4 @@
     <li>
         <a href="lectures/40/01.md"></a>
     </li>
-    <li>
-        <a href="lectures/41/01.md"></a>
-    </li>
-    <li>
-        <a href="lectures/42/01.md"></a>
-    </li>
-    <li>
-        <a href="lectures/43/01.md"></a>
-    </li>
-    <li>
-        <a href="lectures/44/01.md"></a>
-    </li>
 </ol>
