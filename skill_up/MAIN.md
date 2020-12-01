@@ -40,7 +40,7 @@
         <a href="lectures/12/01.md"><b>JavaScript</b> (variables, operators, language constructs)</a>
     </li>
     <li>
-        <a href="lectures/13/01.md"><b>JavaScript</b> (console, confirm, alert, data types)</a>
+        <a href="lectures/13/01.md"><b>JavaScript</b> (data types)</a>
     </li>
     <li>
         <a href="lectures/14/01.md"><b>JavaScript</b> (functions)</a>
