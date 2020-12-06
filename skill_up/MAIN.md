@@ -13,7 +13,7 @@
         <a href="lectures/03/00.md"><b>CSS</b> (selectors, naming)</a>
     </li>
     <li>
-        <a href="lectures/04/00.md"><b>CSS</b> (colors, units, box model, html video/audio)</a>
+        <a href="lectures/04/00.md"><b>CSS</b> (colors, units, box model)</a>
     </li>
     <li>
         <a href="lectures/05/00.md"><b>CSS</b> (position, float)</a>
