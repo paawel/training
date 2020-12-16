@@ -16,13 +16,13 @@
         <a href="lectures/04/00.md"><b>CSS</b> (colors, units, box model)</a>
     </li>
     <li>
-        <a href="lectures/05/00.md"><b>CSS</b> (margin collapsing, position)</a>
+        <a href="lectures/05/00.md"><b>CSS</b> (margin collapsing, position, media queries)</a>
     </li>
     <li>
         <a href="lectures/06/00.md"><b>CSS</b> (float, animation, markup)</a>
     </li>
     <li>
-        <a href="lectures/07/00.md"><b>CSS</b> (flex, media queries)</a>
+        <a href="lectures/07/00.md"><b>CSS</b> (flex)</a>
     </li>
     <li>
         <a href="lectures/08/01.md"><b>CSS</b> (Bootstrap, BEM methodology)</a>
