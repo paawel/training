@@ -19,7 +19,7 @@
         <a href="lectures/05/00.md"><b>CSS</b> (margin collapsing, position, media queries)</a>
     </li>
     <li>
-        <a href="lectures/06/00.md"><b>CSS</b> (float, animation, markup)</a>
+        <a href="lectures/06/00.md"><b>CSS</b>(float, animation, script)</a>
     </li>
     <li>
         <a href="lectures/07/00.md"><b>CSS</b> (flex)</a>
