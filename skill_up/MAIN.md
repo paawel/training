@@ -27,4 +27,7 @@
     <li>
         <a href="lectures/08/00.md"><b>JS</b> (data types, language constructs, operators)</a>
     </li>
+    <li>
+        <a href="lectures/09/00.md"><b>JS</b> (functions)</a>
+    </li>
 </ol>
