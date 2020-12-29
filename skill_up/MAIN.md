@@ -30,4 +30,7 @@
     <li>
         <a href="lectures/09/00.md"><b>JS</b> (functions)</a>
     </li>
+    <li>
+        <a href="lectures/10/00.md"><b>JS</b> (functions II, BEM)</a>
+    </li>
 </ol>
