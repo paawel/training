@@ -33,4 +33,7 @@
     <li>
         <a href="lectures/10/00.md"><b>JS</b> (functions II, BEM)</a>
     </li>
+    <li>
+        <a href="lectures/11/00.md"><b>JS</b>(DOM, this, arrow functions)</a>
+    </li>
 </ol>
