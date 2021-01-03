@@ -1,0 +1,20 @@
+{
+  "name": "sass_example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass styles/app.scss -o build/styles",
+    "min": "minify -o build/result.min.css build/styles/app.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "reset-css": "latest",
+    "bootstrap": "latest"
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "minifier": "latest"
+  }
+}
