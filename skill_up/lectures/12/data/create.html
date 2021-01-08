@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="create.js" defer></script>
+    <style>
+        .data {
+            width: 330px;
+            height: 150px;
+            border: 1px solid black;
+        }
+
+        div {
+            margin-bottom: 20px;
+        }
+        .list-decor {
+            list-style: none;
+            font-size: 2em;
+            background: goldenrod;
+            color: white;
+        }
+        .list-decor li:nth-child(odd)::before {
+            content: "✅";
+            display: inline-block;
+            margin-right: 0.2rem;
+        }
+        .list-decor li:nth-child(even)::before {
+            content: "🤷‍♀";
+            display: inline-block;
+            margin-right: 0.2rem;
+        }
+        .list-decor li:first-child::before {
+            content: "📌";
+            display: inline-block;
+            margin-right: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div contenteditable
+         id="data"
+         class="data">
+    </div>
+
+    <div>
+        <button onclick="showList()">Show list</button>
+        <button onclick="decorList()">Style list</button>
+        <button onclick="removeDecor()">Remove Styles</button>
+        <button onclick="clearList()">Remove list</button>
+    </div>
+
+    <div class="app" id="app">
+    </div>
+</body>
+</html>
