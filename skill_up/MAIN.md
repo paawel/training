@@ -37,6 +37,6 @@
         <a href="lectures/11/00.md"><b>Preprocessors</b> NPM(nodejs)</a>
     </li>
     <li>
-        <a href="lectures/12/00.md"><b>JS</b> (DOM, this, arrow functions)</a>
+        <a href="lectures/12/00.md"><b>JS</b> (DOM, async/defer, bootstrap)</a>
     </li>
 </ol>
