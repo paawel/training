@@ -40,6 +40,6 @@
         <a href="lectures/12/00.md"><b>JS</b> (DOM, async/defer, bootstrap)</a>
     </li>
     <li>
-        <a href="lectures/13/00.md"><b>JS</b> (events, bubbling and capturing)</a>
+        <a href="lectures/13/00.md"><b>JS</b> (events, bubbling and capturing, array)</a>
     </li>
 </ol>
