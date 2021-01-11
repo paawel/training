@@ -43,6 +43,6 @@
         <a href="lectures/13/00.md"><b>JS</b> (events, bubbling and capturing)</a>
     </li>
     <li>
-        <a href="lectures/14/00.md"></a>
+        <a href="lectures/14/00.md"><b>JS</b> (array, number, string)</a>
     </li>
 </ol>
