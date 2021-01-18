@@ -43,6 +43,9 @@
         <a href="lectures/13/00.md"><b>JS</b> (events, bubbling and capturing)</a>
     </li>
     <li>
-        <a href="lectures/14/00.md"><b>JS</b> (array, number, string, let/const)</a>
+        <a href="lectures/14/00.md"><b>JS</b> (array, number, string)</a>
+    </li>
+    <li>
+        <a href="lectures/15/00.md"><b>JS</b> (let/const, timeout, jQuery)</a>
     </li>
 </ol>
