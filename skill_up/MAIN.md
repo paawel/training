@@ -46,6 +46,9 @@
         <a href="lectures/14/00.md"><b>JS</b> (array, number, string)</a>
     </li>
     <li>
-        <a href="lectures/15/00.md"><b>JS</b> (let/const, timeout, jQuery)</a>
+        <a href="lectures/15/00.md"><b>JS</b> (let/const, timeout)</a>
+    </li>
+    <li>
+        <a href="lectures/16/00.md"><b>JS</b> (jQuery, client-server, AJAX)</a>
     </li>
 </ol>
