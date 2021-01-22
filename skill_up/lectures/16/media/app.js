@@ -2,7 +2,7 @@
 	let wrapper = document.getElementById('wrapper');
 	let wrapper1 = document.getElementById('wrapper1');
 
-	let returnObjectFromJSONRequest = url => {
+	let returnObjectFromJSONRequest = function(url) {
 		let request = new XMLHttpRequest();
 		let output = {};
 		request.open('GET', url, false);
@@ -15,10 +15,11 @@
 		return output;
 	};
 
-	btn.onclick = () => {
+	btn.addEventListener('click', function() {
 		let fromInternet = returnObjectFromJSONRequest('https://jsonplaceholder.typicode.com/posts');
 		let fromLocalDir = returnObjectFromJSONRequest('./colors.json');
 		wrapper.innerHTML = '<div> Text from data is: ' + fromInternet[0].body + '</div>';
 		wrapper1.innerHTML = '<div> First color from data is: ' + Object.keys(fromLocalDir)[0] + '</div>';
-	};
+	});
+
 })();
