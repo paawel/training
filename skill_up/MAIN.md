@@ -4,7 +4,7 @@
 
 <ol>
     <li>
-        <a href="lectures/01/01.md">Introduction</a>
+        <a href="lectures/01/01.md"><b>Introduction</b></a>
     </li>
     <li>
         <a href="lectures/02/00.md"><b>HTML</b> (structure, chrome web inspector)</a>
@@ -49,6 +49,9 @@
         <a href="lectures/15/00.md"><b>JS</b> (let/const, timeout)</a>
     </li>
     <li>
-        <a href="lectures/16/00.md"><b>JS</b> (jQuery, client-server, AJAX, Web Storage)</a>
+        <a href="lectures/16/00.md"><b>JS</b> (jQuery, client-server, AJAX)</a>
+    </li>
+    <li>
+        <a href="lectures/17/00.md"><b>JS</b> (this, call/apply, arrow function)</a>
     </li>
 </ol>
