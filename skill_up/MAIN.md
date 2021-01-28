@@ -54,4 +54,7 @@
     <li>
         <a href="lectures/17/00.md"><b>JS</b> (this, call/apply, arrow function)</a>
     </li>
+    <li>
+        <a href="lectures/18/00.md"><b>JS</b> (Object, Date, WS api)</a>
+    </li>
 </ol>

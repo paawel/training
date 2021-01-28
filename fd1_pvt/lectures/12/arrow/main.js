@@ -21,6 +21,12 @@
         }
 
         function startCounting() {
+            debugger;
+
+
+
+
+
             var el = document.getElementById('counter');
             var startCountingButton = document.getElementById('start-counting-button');
             var counter = 0;
