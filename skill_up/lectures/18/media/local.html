@@ -9,14 +9,15 @@
 <button id="btn">Clear Storage</button>
 
 <script>
-    //let _local = window.localStorage;
-    let _session = window.sessionStorage;
+    let _local = window.localStorage;
+    // let _session = window.sessionStorage;
 
-    if(_session.getItem('loggedIn')) {
-        document.getElementById('wrapper').innerText = 'Hi again ' + _session.getItem('userName');
+
+    if(_local.getItem('loggedIn')) {
+        document.getElementById('wrapper').innerText = 'Hi again ' + _local.getItem('userName');
     } else {
-        _session.setItem('userName', (function() {
-            _session.setItem('loggedIn', 'true');
+        _local.setItem('userName', (function() {
+            _local.setItem('loggedIn', 'true');
 
             let user = prompt('whats your name?');
 

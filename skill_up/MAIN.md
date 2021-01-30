@@ -57,4 +57,7 @@
     <li>
         <a href="lectures/18/00.md"><b>JS</b> (Object, Date, WS api)</a>
     </li>
+    <li>
+        <a href="lectures/19/00.md"><b>JS</b> (Error, Closure, TypeScript)</a>
+    </li>
 </ol>
