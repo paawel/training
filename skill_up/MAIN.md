@@ -60,4 +60,7 @@
     <li>
         <a href="lectures/19/00.md"><b>JS</b> (Error, Closure, TypeScript)</a>
     </li>
+    <li>
+        <a href="lectures/20/00.md"><b>JS</b> (Constructor)</a>
+    </li>
 </ol>
