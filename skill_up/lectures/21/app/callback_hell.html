@@ -33,7 +33,7 @@
     myButton.addEventListener('click', function () {
         target.innerText = '';
 
-        getId(function () {
+        getId(function (v) {
             let request = new XMLHttpRequest();
             request.open('GET', `https://jsonplaceholder.typicode.com/todos/${v}`, false);
             request.send();
