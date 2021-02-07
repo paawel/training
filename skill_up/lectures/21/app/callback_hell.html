@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="inId">
+    Put your Id
+    <input type="text" id="inId">
+</label>
+<button id="myButton">
+    Get data
+</button>
+<div id="result">
+
+</div>
+
+<script>
+    let target = document.getElementById('result');
+    let myButton = document.getElementById('myButton');
+
+    function getId(callback) {
+        let _value = document.getElementById('inId').value;
+        callback(_value);
+    }
+
+    function showData(obj, callback) {
+        target.innerHTML = `<div> User id is:  + ${obj["id"]} + User title is: ${obj["title"]}</div>`;
+        setTimeout(callback, 1000);
+    }
+
+    myButton.addEventListener('click', function () {
+        target.innerText = '';
+
+        getId(function () {
+            let request = new XMLHttpRequest();
+            request.open('GET', `https://jsonplaceholder.typicode.com/todos/${v}`, false);
+            request.send();
+            if (request.status === 200) {
+                let response = JSON.parse(request.response);
+                showData(response, function () {
+                    alert('The process is done');
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>

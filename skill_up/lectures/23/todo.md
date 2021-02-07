@@ -1,0 +1,2 @@
+TS generics
+fetch (AJAX)

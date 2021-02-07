@@ -64,6 +64,9 @@
         <a href="lectures/20/00.md"><b>JS</b> (Constructor)</a>
     </li>
     <li>
-        <a href="lectures/21/00.md"><b>JS</b> (Prototype)</a>
+        <a href="lectures/21/00.md"><b>JS</b> (Callback hell, Promises)</a>
+    </li>
+    <li>
+        <a href="lectures/22/00.md"><b>JS</b> (Prototype)</a>
     </li>
 </ol>
