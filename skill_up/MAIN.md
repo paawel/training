@@ -63,4 +63,7 @@
     <li>
         <a href="lectures/20/00.md"><b>JS</b> (Constructor)</a>
     </li>
+    <li>
+        <a href="lectures/21/00.md"><b>JS</b> (Prototype)</a>
+    </li>
 </ol>
