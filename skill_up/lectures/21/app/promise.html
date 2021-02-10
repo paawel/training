@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    debugger;
+
+    let foo = new Promise((res, rej) => {
+        setTimeout(()=>{
+            res(2+2);
+        }, 2000);
+    });
+
+    debugger;
+
+    foo.then(res => {
+        debugger;
+        return res += 2;
+    })
+        .then(res => {
+            debugger;
+            if(res !== 6) {
+                return res
+            } else {
+                throw new Error('stop here');
+            }
+        })
+        .then(res => {
+            debugger;
+            console.log(res += 3)
+        })
+        .catch(er => {
+            debugger;
+            console.log(er.message);
+        });
+</script>
+</body>
+</html>
