@@ -69,4 +69,7 @@
     <li>
         <a href="lectures/22/00.md"><b>JS</b> (Prototype)</a>
     </li>
+    <li>
+        <a href="lectures/23/00.md"><b>JS</b> (Class, CORS)</a>
+    </li>
 </ol>
