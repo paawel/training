@@ -73,6 +73,6 @@
         <a href="lectures/23/00.md"><b>JS</b> (Class)</a>
     </li>
     <li>
-        <a href="lectures/24/00.md"><b>JS</b> (CORS, Fetch)</a>
+        <a href="lectures/24/00.md"><b>JS</b> (CORS, Fetch, Vue install)</a>
     </li>
 </ol>
