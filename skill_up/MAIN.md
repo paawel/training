@@ -70,6 +70,9 @@
         <a href="lectures/22/00.md"><b>JS</b> (Prototype)</a>
     </li>
     <li>
-        <a href="lectures/23/00.md"><b>JS</b> (Class, CORS, Fetch)</a>
+        <a href="lectures/23/00.md"><b>JS</b> (Class)</a>
+    </li>
+    <li>
+        <a href="lectures/24/00.md"><b>JS</b> (CORS, Fetch)</a>
     </li>
 </ol>
