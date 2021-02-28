@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="">
+        $('.send').click(function (e) {
+            e.preventDefault();
+            alert('Form was sended');
+        });
+    </script>
+</head>
+<body>
+    <form action="sample.php">
+        <label for="fname">
+            First name:
+        </label>
+        <input type="text" id="fname" name="fname" value="John">
+        <label for="lname">
+            Last name:
+        </label>
+        <input type="text" id="lname" name="lname" value="Doe">
+        <input type="button" value="Submit" id="send">
+    </form>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</body>
+</html>
