@@ -76,9 +76,9 @@
         <a href="lectures/24/00.md"><b>JS</b> (CORS, Fetch, Vue install)</a>
     </li>
     <li>
-        <a href="lectures/25/00.md"><b>TS</b> (Interface, Generic, Vue)</a>
+        <a href="lectures/25/00.md"><b>TS</b> (Interface, Generic)</a>
     </li>
     <li>
-        <a href="lectures/26/00.md"><b>React</b> (setup, basic concepts)</a>
+        <a href="lectures/26/00.md"><b>Vue</b> (components)</a>
     </li>
 </ol>
