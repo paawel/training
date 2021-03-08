@@ -81,4 +81,7 @@
     <li>
         <a href="lectures/26/00.md"><b>Vue</b> (components)</a>
     </li>
+    <li>
+        <a href="lectures/27/00.md"><b>Angular</b> (intro)</a>
+    </li>
 </ol>
